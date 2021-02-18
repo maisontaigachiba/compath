@@ -1,0 +1,167 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>テストページ</title>
+    <style>
+
+
+
+
+body { background-image:url("{% static "img/b121.jpg" %}")}
+
+input {width: 300px; }
+
+
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 15px 0;
+  color: transparent;
+}
+/* Edge・IE向け 溝の色（つまみより左側） */
+input[type=range]::-ms-fill-lower {
+  background: #cccccc;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+/* Edge・IE向け 溝の色（つまみより右側） */
+input[type=range]::-ms-fill-upper {
+  background: #cccccc;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+/* Edge・IE向け つまみのスタイル */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+/* Edge・IE向け focus時の色（つまみより左側） */
+input[type=range]:focus::-ms-fill-lower {
+  background: #999999;
+}
+/* Edge・IE向け focus時の色（つまみより右側） */
+input[type=range]:focus::-ms-fill-upper {
+  background: #999999;
+}
+
+/* Edge・IE向け ポップアップを非表示に */
+input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+.btn-square {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+.btn-square:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+
+    </style>
+</head>
+
+<body>
+    <h1>◆下記ご質問にご回答下さい◆</h1>
+    <form action="" method="post">
+    <h1><font size="5">リスクをとることは怖くない</h1>
+        {% csrf_token %}
+        <input type="range" name="prm" class="input-range" />
+    <h1><font size="5">家が財産を持っている</h1>
+        {% csrf_token %}
+        <input type="range" nam
+e="prm2" class="input-range" />
+    <h1><font size="5">数々の情報源がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm3" class="input-range" />
+    <h1><font size="5">起業をしてみたい</h1>
+        {% csrf_token %}
+        <input type="range" name="prm4" class="input-range" />
+    <h1><font size="5">投資に興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm5" class="input-range" />
+    <h1><font size="5">芸術に興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm6" class="input-range" />
+    <h1><font size="5">他人をいやすことに興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm7" class="input-range" />
+    <h1><font size="5">人を取りまとめることが得意だ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm8" class="input-range" />
+    <h1><font size="5">芸術に興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm9" class="input-range" />
+    <h1><font size="5">ゲーム的なものに熱中してしまう</h1>
+        {% csrf_token %}
+        <input type="range" name="prm10" class="input-range" />
+    <h1><font size="5">人に自分をアピールすることが得意だ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm11" class="input-range" />
+    <h1><font size="5">多分野に興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm12" class="input-range" />
+    <h1><font size="5">理系の学問が好きだ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm13" class="input-range" />
+    <h1><font size="5">文系の学問が好きだ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm14" class="input-range" />
+    <h1><font size="5">多分野に興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm15" class="input-range" />
+    <h1><font size="5">IT系に強い</h1>
+        {% csrf_token %}
+        <input type="range" name="prm16" class="input-range" />
+    <h1><font size="5">言葉以外の仕草などを大事にしている</h1>
+        {% csrf_token %}
+        <input type="range" name="prm17" class="input-range" />
+    <h1><font size="5">肉体労働が苦ではない</h1>
+        {% csrf_token %}
+        <input type="range" name="prm18" class="input-range" />
+    <h1><font size="5">機械を触ることが好きだ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm19" class="input-range" />
+    <h1><font size="5">職人気質かも知れない</h1>
+        {% csrf_token %}
+        <input type="range" name="prm20" class="input-range" />
+    <h1><font size="5">創造することが好きだ</h1>
+        {% csrf_token %}
+        <input type="range" name="prm21" class="input-range" />
+    <h1><font size="5">物語を創造することに興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm22" class="input-range" />
+    <h1><font size="5">未来を創造することに興味がある</h1>
+        {% csrf_token %}
+        <input type="range" name="prm23" class="input-range" />
+    <h1>転送ボタン</h1>
+    <a href="../test2" class="btn-square">転送する</a>
+    </form>
+</body>
+
+</html>

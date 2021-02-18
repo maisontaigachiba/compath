@@ -1,0 +1,93 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>テストページ</title>
+    <style>
+
+
+
+
+body { background-image:url("{% static "img/b121.jpg" %}")}
+
+input {width: 300px; }
+
+
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 15px 0;
+  color: transparent;
+}
+/* Edge・IE向け 溝の色（つまみより左側） */
+input[type=range]::-ms-fill-lower {
+  background: #cccccc;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+/* Edge・IE向け 溝の色（つまみより右側） */
+input[type=range]::-ms-fill-upper {
+  background: #cccccc;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+/* Edge・IE向け つまみのスタイル */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+/* Edge・IE向け focus時の色（つまみより左側） */
+input[type=range]:focus::-ms-fill-lower {
+  background: #999999;
+}
+/* Edge・IE向け focus時の色（つまみより右側） */
+input[type=range]:focus::-ms-fill-upper {
+  background: #999999;
+}
+
+/* Edge・IE向け ポップアップを非表示に */
+input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+    <h1>理系の志望度は？</h1>
+        {% csrf_token %}
+        <input type="range" name="prm" class="input-range" />
+    <h1>挑戦が好きか？</h1>
+        {% csrf_token %}
+        <input type="range" name="prm2" class="input-range" />
+    <h1>一つの事に打ち込む？</h1>
+        {% csrf_token %}
+        <input type="range" name="prm3" class="input-range" />
+    <h1>送信ボタン</h1>
+    <button type="submit" name="送信">送信する</button>
+    </form>
+    <h1> 理系志望度：{{ msg }} %</h1>
+    <h1> 挑戦度：{{ msg2 }} %</h1>
+    <h1> 一つ打ち込み度：{{ msg3 }} %</h>
+
+</body>
+
+</html>
